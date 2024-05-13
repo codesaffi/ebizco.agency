@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="photo-output.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EBIZCO</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"/>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  
+  <body>
+
+    <header class="header">
+      <a href="#home" class="logo">
+        <img src="photo-output.PNG" alt="">
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+
+
+        <ul>
+          <li><a href="index.html" class="active">home</a></li>
+          <li><a href="about.html" >about</a>
+          <ul class="dropdown">
+            <li><a href="about.html">about us</a></li>
+            <li><a href="team.html">our team</a></li>
+          </ul>
+          </li>
+          <li><a href="#services" >services</a></li>
+          <li><a href="#testimonials" >testimonials</a></li>
+          <li><a href="#contact" >contact</a></li>
+        </ul>
+
+
+      </nav>
+
+
+
+
+
+    </header>
+
+        <footer class="footer">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/ebizco-undefined-8a9aa62b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://www.facebook.com/share/iDdRqeL8XhWcadHW/?mibextid=WC7FNe"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/ebiz.co?igsh=MXJ4cThwYmFrb3J5cA=="><i class="bx bxl-instagram-alt"></i></a>
+            <a href="https://x.com/ebizcoagency?s=21"><i class="bx bxl-twitter"></i></a>
+        </div>
+  
+        <ul class="list">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+  
+          <li>
+            <a href="#services">services</a>
+          </li>
+  
+          <li>
+            <a href="about.html">about me</a>
+          </li>
+  
+          <li>
+            <a href="#contact">contact</a>
+          </li>
+  
+          <li>
+            <a href="#testimonials">testimonials</a>
+          </li>
+        </ul>
+         <p class="copyright">
+          o ebizco | all rights reserved
+         </p>
+       </footer>
+  
+      <script src="service.js"></script>
+     
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-color:#000000;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color:#00ffee;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+
+                    /* navbar */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 12% 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 15px;
+}
+
+.logo img{
+    width: 130px;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #555;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown li{
+    display: block;
+}
+
+ul li ul.dropdown{
+    width: 100%;
+    background: #00ffee;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover{
+    background: #131313;
+}
+
+
+    ul li:hover ul.dropdown{
+        display: block;
+    }
+
+
+
+
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon{
+    display: none;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
+
+                     /* footer  */
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--second-bg-color);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 255px var(--main-color);
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+    border-bottom: 3px solid var(--main-color);
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;  
+}
+
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+
+
+
+
+@media (max-width:1285px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+
+    .home-img img {
+        position: relative;
+        top: 3rem;
+        height: 50vh;
+        width: 25vw;
+        border-radius: 50%;
+        box-shadow: 0 0 17px var(--main-color);
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px) {
+
+    header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+        .footer{
+        padding: 2rem 3%;
+    }
+
+}
+
+
+@media (max-width:895px) {
+
+    #menu-icon{
+        display: block;
+        cursor:pointer;
+        font-size: 3.6rem;
+        color: var(--main-color);
+    }
+
+    .logo{
+        margin: 0 0 15px;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;  
+        overflow: hidden;
+        opacity: 1;  
+    }
+
+    .navbar.active{
+        display: block;
+        opacity: 1;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+}
